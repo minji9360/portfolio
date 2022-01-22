@@ -5,6 +5,10 @@
     font-style: normal;
 }
 
+* {
+    cursor: none;
+}
+
 html {
     font-family: 'SpoqaHanSansNeo-Regular';
     font-size: 625%;
@@ -20,4 +24,15 @@ header nav{
     float: right;
     margin: 1.2rem;
     font-size: 1rem;
+}
+
+.cursor {
+    border-left: 0.5rem solid red;
+    border-bottom: 0.5rem solid transparent;
+    position: absolute;
+    z-index: 1000;
+    transform: translate(-15%, -30%);
+    pointer-events: none;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
