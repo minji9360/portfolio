@@ -6,18 +6,21 @@
 }
 
 * {
+	box-sizing: border-box;
     cursor: none;
 }
 
 html {
     font-family: 'SpoqaHanSansNeo-Regular';
     font-size: 625%;
+    background-color: #f5f9ff;
 }
 
 header {
     height: 50px;
     position: fixed;
     width: 100%;
+    z-index: 3;
 }
 
 header nav{
@@ -26,8 +29,59 @@ header nav{
     font-size: 1rem;
 }
 
+ .parallax {
+    perspective: 100px;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.parallax__layer {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.parallax__layer img {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    width: 100vw;
+}
+
+.parallax__layer--0 {
+    transform: translateZ(-100px) scale(2);
+}
+.parallax__layer--1 {
+    transform: translateZ(-50px) scale(1.5);
+}
+.parallax__layer--2 {
+    transform: translateZ(0px) scale(1);
+}
+
+.parallax__main {
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 2;
+}
+
+.parallax section {
+    background: #1a2536;
+    height: 100vh;
+}
+
 .cursor {
-    border-left: 0.5rem solid red;
+    border-left: 0.5rem solid white;
     border-bottom: 0.5rem solid transparent;
     position: absolute;
     z-index: 1000;
