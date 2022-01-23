@@ -29,7 +29,7 @@ header nav{
     font-size: 1rem;
 }
 
-.parallax__main {
+.parallax {
     perspective: 100px;
     height: 100vh;
     overflow-x: hidden;
@@ -60,13 +60,16 @@ header nav{
     transform: translateZ(-100px) scale(2);
 }
 .parallax__layer--1 {
-    transform: translateZ(-50px) scale(1.5);
+    transform: translateZ(-100px) scale(2);
 }
 .parallax__layer--2 {
+    transform: translateZ(-50px) scale(1.5);
+}
+.parallax__layer--3 {
     transform: translateZ(0px) scale(1);
 }
 
-.parallax__contents {
+.parallax__sections {
     display: block;
     position: absolute;
     top: 100%;
@@ -75,7 +78,7 @@ header nav{
     z-index: 2;
 }
 
-.parallax__contents section {
+.parallax__sections section {
     background: #1a2536;
     height: 100vh;
 }
