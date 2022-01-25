@@ -5,6 +5,13 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'WandohopeB';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10@1.0/WandohopeB.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 * {
 	box-sizing: border-box;
     cursor: none;
@@ -84,12 +91,22 @@ header nav{
 }
 
 .cursor {
-    border-left: 0.5rem solid white;
-    border-bottom: 0.5rem solid transparent;
-    position: absolute;
-    z-index: 1000;
-    transform: translate(-15%, -30%);
     pointer-events: none;
+}
+
+.cursor__pointer {
+    z-index: 1000;
+    position: absolute;
+    border-left: 0.5rem solid red;
+    border-bottom: 0.5rem solid transparent;
+}
+
+.cursor__image {
+    z-index: 1000;
+    width: 2rem;
+    height: 2rem;
+    position: relative;
+    transform: scaleX(-1);
     background-size: cover;
     background-repeat: no-repeat;
 }
